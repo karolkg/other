@@ -1,4 +1,4 @@
-package Algoritms;
+package algoritms;
 
 import static org.junit.Assert.*;
 
@@ -8,6 +8,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import algoritms.CyclicRotation;
 
 public class CyclicRotationTest {
   CyclicRotation cr;
