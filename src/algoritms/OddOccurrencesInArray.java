@@ -1,24 +1,26 @@
 package algoritms;
 
+import java.util.*;
+
 public class OddOccurrencesInArray {
   
   public int solution(int[] array) {
-    if(array.length < 1 || array.length > 1000000 || (array.length%2 == 0)) return -1;
+ //   if(array.length < 1 || array.length > 1000000 || (array.length%2 == 0)) return -1;
+    int result = -8;
     
-    
-    int result = -1;
-    
+    Map<Integer, Integer> map = new HashMap<>();
     for(int i = 0; i < array.length; i++) {
-      result = array[i];
-      if(result < 1 || result > 1000000000) return -1;
+      if(array[i] < 1 || array[i] > 1e10) return -1;
+      int value;      
+      if( !map.containsKey(array[i]) ) value = 0;
+      else value = map.get(array[i]);      
       
-      for(int j = i + 1; j < array.length; j++) {        
-        if(array[i] == array[j])  break;
-        if(j == array.length - 1) {
-          if(i == j - 1) return array[i+1];
-          else  return array[i];
-        }
-      }
+      map.put(array[i], value + 1);      
+    }
+    
+    for(Map.Entry<Integer, Integer> entry: map.entrySet()) {
+      System.out.println("Key:" + entry.getKey() + " value: " + entry.getValue());
+      if(entry.getValue() == 1) return entry.getKey();
     }
     
     return result;

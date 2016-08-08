@@ -9,8 +9,7 @@ import org.junit.Test;
 import junit.framework.Assert;
 
 public class OddOccurrencesInArrayTest {
-  protected int[] array;
-  OddOccurrencesInArray odd;
+  protected OddOccurrencesInArray odd;
 
   @Before
   public void setUp() throws Exception {
@@ -23,9 +22,9 @@ public class OddOccurrencesInArrayTest {
 
   @Test
   public void testPositiveArray() {
-    int[] ar = {1,3,5,7,9,1,5,3,7};
+    int[] ar = {9, 3, 9, 3, 9, 7, 9};
     int result =  odd.solution(ar);
-    assertEquals(9, result);
+    assertEquals(7, result);
   }
   
   @Test
@@ -34,4 +33,10 @@ public class OddOccurrencesInArrayTest {
     assertEquals(-1, odd.solution(ar));
   }
 
+  @Test
+  public void testN201() {
+    int[] ar = new int[201];
+    ar[134] = 700;
+    assertEquals(700, odd.solution(ar));    
+  }
 }
