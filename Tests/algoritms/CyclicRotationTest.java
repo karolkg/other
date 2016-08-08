@@ -28,20 +28,19 @@ public class CyclicRotationTest {
   @Test
   public void testSolution() {
    int[] result = cr.solution(tab, k);   
-   Assert.assertArrayEquals("int", new int[]{7,8,9,1,2,3,4,5,6}, result );
+   Assert.assertArrayEquals( new int[]{7,8,9,1,2,3,4,5,6}, result );
   }
- /* 
-  @Test (expected = InvalidAttributeValueException.class)
-  public void testInvalidAttributeValueException() throws InvalidAttributeValueException {
-    int[] array = new int[101];
-    cr.solution(array, k);    
-    fail("brak wyjatku");    
-  }
-  */
+ 
   @Test
   public void testEmptyArray() {
     int[] array = new int[0];
     Assert.assertArrayEquals(array, cr.solution(array, k));
+  }
+  
+  @Test
+  public void testover1000() {
+    int[] ar = {1,2,3,-1001,5,6,7,8,9,1001};
+    Assert.assertArrayEquals(new int[]{8,9,1000,1,2,3,-1000,5,6,7}, cr.solution(ar, k));
   }
 
 }
