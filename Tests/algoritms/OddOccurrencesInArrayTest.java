@@ -28,8 +28,8 @@ public class OddOccurrencesInArrayTest {
   }
   
   @Test
-  public void testNegativArray() {
-    int[] ar = {1,1,1,1,1,1,1,1,0};
+  public void testEvenNumberOfArray() {
+    int[] ar = {1,1,1,1,1,1,1,1};
     assertEquals(-1, odd.solution(ar));
   }
 
