@@ -26,14 +26,7 @@ public class CyclicRotationTest {
    int[] result = cr.solution(tab, k);   
    Assert.assertArrayEquals("int", new int[]{7,8,9,1,2,3,4,5,6}, result );
   }
- /* 
-  @Test (expected = InvalidAttributeValueException.class)
-  public void testInvalidAttributeValueException() throws InvalidAttributeValueException {
-    int[] array = new int[101];
-    cr.solution(array, k);    
-    fail("brak wyjatku");    
-  }
-  */
+ 
   @Test
   public void testEmptyArray() {
     int[] array = new int[0];
