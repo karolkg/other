@@ -1,9 +1,5 @@
 package algoritms;
 
-import static org.junit.Assert.*;
-
-import javax.naming.directory.InvalidAttributeValueException;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
