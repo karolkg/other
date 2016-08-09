@@ -4,18 +4,21 @@ public class TapeEquilibrium {
 	
 	public int solution(int[] A) {
 		int finalResult = Integer.MAX_VALUE;		
+		int[] B = new int[A.length];
+		B[0] = A[0];
+		for(int i = 1; i <= A.length - 1; i++) {				
+			B[i] = B[i - 1] + A[i];			
+		}
+	
 		
-		for(int p = 1; p <= A.length - 1; p++) {
-			int result1 = 0, result2 = 0;
-			//counting first part of array (0,P)
-			for(int i = 0; i < p; i++) result1 += A[i];
-			//counting second part of array <P,N)
-			for(int i = p; i < A.length; i++) result2 +=A[i];
-			System.out.println("1:" + result1 + " 2:" + result2);
-			int res = Math.abs(result1 - result2);
+		for(int i = 0; i < (A.length - 1); i++) {
 			
+			int res = Math.abs(B[i] - (B[A.length - 1] - B[i]));
+	
 			if(res < finalResult) finalResult = res;
-		}		
+				
+		}
+			
 		return finalResult;
 	}
 
