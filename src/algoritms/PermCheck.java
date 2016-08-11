@@ -33,32 +33,4 @@ public class PermCheck {
     return result;
   }
 
-  
-  public static void main(String[] args) {
-    final int MAX = (int)1e8;
-    int[] array = new int[MAX];
-    for(int i: array) array[i] = i;
-    
-    PermCheck pch = new PermCheck();
-
-    long t1 = System.currentTimeMillis();
-
-    // Version 1: use reduce method.
-  //  for (int i = 0; i < 10000000; i++) {
-        pch.solution(array);
- //   }
-
-    long t2 = System.currentTimeMillis();
-
-    // Version 2: use for-loop.
-//    for (int i = 0; i < 10000000; i++) {
-        pch.solution2(array);
-  //  }
-
-    long t3 = System.currentTimeMillis();
-
-    // ... Times.
-    System.out.println("solution1:" + (t2 - t1));
-    System.out.println("solution2:" + (t3 - t2));
-  }
 }
