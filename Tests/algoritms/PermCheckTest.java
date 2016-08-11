@@ -42,5 +42,28 @@ public class PermCheckTest {
     int[] a = {2,1,3,4,5,7};
     assertEquals(0, pc.solution(a));
   }
+  
+  @Test
+  public void testMinMax() {
+    int[] a = {1};
+    assertEquals(1, pc.solution(a));
+  }
+  
+  @Test
+  public void testCorrectTotalSum() {
+    int[] a = {2,2,3,4,5,6,7,7};
+    assertEquals(0, pc.solution(a));
+  }
+  
+  @Test
+  public void test2ElemPos() {
+    int[] a = {2,1};
+    assertEquals(1, pc.solution(a));
+  }
+  @Test
+  public void test2ElemNeg() {
+    int[] a = {1,1};
+    assertEquals(0, pc.solution(a));
+  }
 
 }
