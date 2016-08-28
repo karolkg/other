@@ -7,17 +7,17 @@ public class MinAvgTwoSlices {
         return 0;
     }
     int min = 0;
-    int minAvg = 10001;
+    float minAvg = 10001f;
     
     for(int i = 0; i < A.length - 1; i++) {
-        int avg = A[i] + A[i + 1] / 2;
+        float avg = (A[i] + A[i + 1]) / 2.0f;
         if(avg < minAvg) {
             min = i;
             minAvg = avg;
         }
         
         if(i < A.length - 2) {
-            avg = A[i] + A[i + 1] + A[i + 2] / 3;
+            avg = (A[i] + A[i + 1] + A[i + 2]) / 3.0f;
             if(avg < minAvg) {
                 min = i;
                 minAvg = avg;
