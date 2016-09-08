@@ -28,4 +28,8 @@ public class ChocolatesByNumbersTest {
     assertEquals(10, c.solution(10000000,1000000));
   }
 
+  @Test
+  public void testLarge2Values() {
+    assertEquals(947853, c.solution(947853,4453));
+  }
 }

@@ -25,14 +25,14 @@ public class ChocolatesByNumbers {
   }
   
   
-  public int solution(int N, int M) { 
-    if(N < 1)
+  public int solution(int n, int m) { 
+    if(n < 1)
       return 0;
     
-    
-    long lcm = (long)N * M / NWD(N, M); 
+    long N = n, M = m;
+    long lcm = N * M / NWD(N, M); 
     System.out.println(NWD(N,M));
-    return (int) lcm / M;
+    return  (int)(lcm /  M);
   }
   
   private long NWD(long N, long M) {    
